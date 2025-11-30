@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Антон Мудреченко</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #fafafa;
+        color: #333;
+        scroll-behavior: smooth;
+    }
+
+    .header {
+        background: linear-gradient(135deg, #d65b00, #ff9b4a);
+        padding: 45px 20px;
+        text-align: center;
+        color: white;
+    }
+
+    .header h1 {
+        font-style: italic;
+        font-size: 42px;
+        margin: 0;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    img.main-photo {
+        width: 260px;
+        border-radius: 12px;
+        display: block;
+        margin: 20px auto;
+    }
+
+    h2 {
+        color: #ff8c32;
+        margin-top: 35px;
+        font-size: 26px;
+    }
+
+    .gallery {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .photo {
+        width: 30%;
+        height: 180px;
+        border: 2px solid #ff9b4a;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #f3f3f3;
+    }
+
+    .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Контакты */
+    .contacts {
+        margin-top: 30px;
+        padding: 20px;
+        background: #fff2e6;
+        border-radius: 10px;
+        border: 1px solid #ffd6b3;
+    }
+
+    .contacts a {
+        color: #d65b00;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .up-btn {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        background: #ff8c32;
+        color: white;
+        border: none;
+        padding: 12px 18px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        opacity: 0.9;
+    }
+
+    .up-btn:hover {
+        background: #e9781d;
+    }
+
+    @media (max-width: 600px) {
+
+        .header h1 {
+            font-size: 32px;
+        }
+
+        .container {
+            margin: 20px;
+            padding: 18px;
+        }
+
+        img.main-photo {
+            width: 270px;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        .gallery {
+            flex-direction: column;
+        }
+
+        .photo {
+            width: 100%;
+            height: 220px;
+        }
+
+        .up-btn {
+            right: 15px;
+            bottom: 15px;
+            padding: 10px 14px;
+        }
+    }
+
+</style>
+</head>
+<body>
+
+<a id="top"></a>
+
+<div class="header">
+    <h1>Антон Мудреченко</h1>
+    <p>19 лет · ИРНИТУ · Финансы и кредит</p>
+</div>
+
+<div class="container">
+
+    <img class="main-photo" src="anton.jpg" alt="Фото Антона">
+
+    <h2>Обо мне</h2>
+    <p>
+        Меня зовут Антон, мне 19 лет. Я учусь в ИРНИТУ (г. Иркутск) 
+        на втором курсе специальности «Финансы и кредит».
+    </p>
+    <p>
+        Данное направление интересно тем, что помимо изучения экономических законов, 
+        оно углубляется в банковское дело, где я вижу перспективы для карьерного роста 
+        и профессионального развития.
+    </p>
+
+    <h2>Увлечения</h2>
+    <p>
+        В свободное от учёбы время я с удовольствием изучаю рисование, цифровую графику и дизайн.
+        Это помогает развивать насмотренность, креативность и внимательность к деталям.
+    </p>
+
+    <h2>Навыки</h2>
+    <p>
+        Увлекаться цифровой графикой я начал довольно давно. За это время я накопил значительный 
+        опыт в обработке изображений. Пару лет назад я взялся за изучение рисования, поскольку считаю это сложным, но довольно перспективным направлением. 
+        На данный момент я на достаточном уровне владею Adobe Photoshop.
+    </p>
+
+<div class="gallery">
+    <div class="photo">
+        <img src="ps1.jpg" alt="Работа Photoshop №1">
+    </div>
+
+    <div class="photo">
+        <img src="ps2.jpg" alt="Работа Photoshop №2">
+    </div>
+
+    <div class="photo">
+        <img src="ps3.jpg" alt="Работа Photoshop №3">
+    </div>
+</div>
+
+    <h2>Контакты</h2>
+    <div class="contacts">
+        <p>Email: <b>mudrechenko06@mail.ru</b></p>
+        <p>ВК: <a href="https://vk.com/a.mudrechenko" target="_blank">a.mudrechenko</a></p>
+    </div>
+
+</div>
+
+<button class="up-btn" id="upBtn">Наверх</button>
+
+<script>
+document.getElementById("upBtn").addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
+
+</body>
+</html>
+
